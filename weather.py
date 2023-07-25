@@ -1,0 +1,47 @@
+def get_weather_data(date):
+    # Replace this function with the API call to get temperature data for the given date
+    # Return the temperature for the given date
+    # For example, you can use a weather API to fetch the temperature data
+    return 25  # Placeholder value, replace with actual API call
+
+def get_wind_speed_data(date):
+    # Replace this function with the API call to get wind speed data for the given date
+    # Return the wind speed for the given date
+    # For example, you can use a weather API to fetch the wind speed data
+    return 10  # Placeholder value, replace with actual API call
+
+def get_pressure_data(date):
+    # Replace this function with the API call to get pressure data for the given date
+    # Return the pressure for the given date
+    # For example, you can use a weather API to fetch the pressure data
+    return 1012  # Placeholder value, replace with actual API call
+
+def main():
+    while True:
+        print("1. Get weather")
+        print("2. Get Wind Speed")
+        print("3. Get Pressure")
+        print("0. Exit")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice == 0:
+            print("Terminating the program.")
+            break
+
+        date = input("Enter the date (YYYY-MM-DD): ")
+
+        if choice == 1:
+            temperature = get_weather_data(date)
+            print(f"Temperature on {date}: {temperature}°C")
+        elif choice == 2:
+            wind_speed = get_wind_speed_data(date)
+            print(f"Wind Speed on {date}: {wind_speed} km/h")
+        elif choice == 3:
+            pressure = get_pressure_data(date)
+            print(f"Pressure on {date}: {pressure} hPa")
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
